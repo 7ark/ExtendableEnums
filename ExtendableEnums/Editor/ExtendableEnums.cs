@@ -128,7 +128,7 @@ public class ExtendEnumDrawer : PropertyDrawer
         EditorGUI.EndProperty();
     }
 
-    //I know this is pretty much the same as GetBaseProperty, I was lazy, bite me.
+    //I know this is pretty much the same as GetBaseProperty.
     static string GetEnumName(SerializedProperty prop)
     {
         string[] separatedPaths = prop.propertyPath.Split('.');
@@ -180,7 +180,7 @@ public class ExtendEnumDrawer : PropertyDrawer
         }
         else
         {
-            bool commaAfter = commas[commas.Length - 1].Trim().Length == 0; //This should check if the weirdo added a comma after their last enum value.
+            bool commaAfter = commas[commas.Length - 1].Trim().Length == 0; //This should check if they added a comma after their last enum value.
 
             if (commaAfter)
             {
